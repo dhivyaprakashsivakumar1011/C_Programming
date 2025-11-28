@@ -2,8 +2,9 @@
 int main()
 {
     int num=5;
-    for(int i=5;i>0;i--)
+    loop:if(num>0)
     {
         printf("%d \n",num--);
+        goto loop;
     }
 } 
