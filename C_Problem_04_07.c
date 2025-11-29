@@ -2,7 +2,8 @@
 int main()
 {
     int num=100;
-    for(int i=10;i<num;i++)
+    int i=10;
+    loop:if(i<num)
     {
        int temp = i%10;
        int temp1 = i/10;
@@ -13,5 +14,7 @@ int main()
                 printf("%d\n",i);
             }
         }
+        i++;
+        goto loop;
     }
 }

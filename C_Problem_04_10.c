@@ -1,8 +1,8 @@
 #include<stdio.h>
 int main()
 {
-    int num=100,i,sum=0;
-    for(i=10;i<num;i++)
+    int num=100,i=10,sum=0;
+    loop:if(i<num)
     {
         int temp=i/10;
         if(temp==7)
@@ -12,6 +12,8 @@ int main()
                 sum=sum+i;
             }
         }
+        i++;
+        goto loop;
     }
     printf("%d",sum);
 }
