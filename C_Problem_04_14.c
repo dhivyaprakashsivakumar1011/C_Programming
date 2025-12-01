@@ -1,10 +1,10 @@
 #include<stdio.h>
 int main()
 {
-    int num,count=1;
+    int num,org,orgd,count=1,fdigit=0,ldigit=0,middigit,out,loopno=1;
     printf("enter the number: ");
     scanf("%d",&num);
-
+    org=num;
     loop:if(num==0)
     {
         goto end;
@@ -17,10 +17,16 @@ int main()
     end:{
         count=count/10;
 
-        num=num/count;
+        orgd=org/count;
     }
-    printf("%d",num);
+    
 
+        fdigit=org/count;
+        ldigit=org%10;
+        middigit=org%count;
+        middigit/=10;
+        out=ldigit*count+middigit*10+fdigit;
+    printf("%d",out);
     return 0;
 
 }
